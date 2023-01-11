@@ -1,0 +1,37 @@
+server:   
+  port: 8080
+  
+spring:
+  application:
+    name: ecommerce-api
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop  # OPTIONS: none, validate, update, create-drop                              
+  jackson:
+    date-format: dd/MM/yyyy HH:mm:ss  
+  h2:
+    console.enabled: true  # Enables H2 browser page on: /h2-console 
+      
+          
+# specific application custom properties  
+app:
+  company:
+    name: MyStore
+    address:
+      city: Portugal
+      country: Lisbon
+      
+      
+    
+    
+
+    
+
